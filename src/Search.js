@@ -4,10 +4,11 @@ import { actions } from "./jokes";
 import { Form, Row, Input, Button } from './styles';
 
 export class Search extends Component {
+
     state = {
-        query: this.props.filters
+        query: ''//this.props.filters.term
     };
-    ///// TODO this.props.filters.term
+    // this.props.filters.term
 
     onChange = e =>
     {
@@ -16,7 +17,7 @@ export class Search extends Component {
 
     submit = e => {
         e.preventDefault();
-        this.props.setFilter("term", this.state.query);
+        this.props.setFilter('term', this.state.query);
     };
 
     render(){
@@ -30,4 +31,6 @@ export class Search extends Component {
         );
     }
 }
+
+// connect to the redux store and get the state that we need as well as the action creators
 export default connect( state => state.jokes , actions )(Search);

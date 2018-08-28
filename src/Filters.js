@@ -20,11 +20,11 @@ const PageInfo = styled.span`
     margin: 1rem;
 `;
 
-export function Filters({ page, totalPages, next, previous}){
+export function Filters({ page, totalPages, next, previous, setFilter}){
     return (
         <Container>
             <Content>
-                <Search/>
+                <Search setFilter={setFilter}/>
                 <Button width={10} disabled={page === 1} onClick={previous}>
                 &lt;
                 </Button>

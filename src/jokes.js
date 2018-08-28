@@ -9,6 +9,9 @@ const initialState = {
   results: []
 };
 
+// A function that can update any given filter
+// this returns a copy of the state with the filters updated
+// the filter we want to update and value we want to use are going to be specified in the action object
 function setFilter(state, action){
   return {
     ...state,

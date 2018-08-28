@@ -36,7 +36,7 @@ class App extends Component {
 
   // function updateMessage is passed down as a prop to the Home component
   // The provier will naw make the store available to the entire component tree
-  // Tis actually works by using a react-conext but this is invisibble to use because we
+  // Tis actually works by using a react-conext but this is invisible to use because we
   // access the datastore using a higher order component
   render() {
     return (

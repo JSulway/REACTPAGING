@@ -24,7 +24,7 @@ export function Home( { updateMessage } ){
 
       <Greeting />
       <Counter step={1} />
-      // <JokesComponent />
+      <JokesComponent />
 	  <button onClick={() => (updateMessage("foo"))}>Click Me!</button>
     </React.Fragment>
   );
